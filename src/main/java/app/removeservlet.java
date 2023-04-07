@@ -26,12 +26,12 @@ public class removeservlet extends HttpServlet {
      */
     public removeservlet() {
         super();
-        // TODO Auto-generated constructor stub
+        
     }
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		int cpid = Integer.parseInt(request.getParameter("idc")) ;
 		HttpSession session = request.getSession();
 		RequestDispatcher dispatcher = super.getServletContext().getRequestDispatcher("/Cart.jsp");
@@ -45,12 +45,12 @@ public class removeservlet extends HttpServlet {
    				if(cq==1) {
    					cart.remove(a);
    					session.setAttribute("cartsession", cart);
-   					//System.out.println(cart);
+   					
    					break;
    				}else {
    					a.setQunt(cq-1);
    					session.setAttribute("cartsession", cart);
-   					//System.out.println(cart);
+   					
    					break;
    				}
 				
