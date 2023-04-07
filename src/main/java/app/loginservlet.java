@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
 public class loginservlet extends HttpServlet {
 	
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		String u = request.getParameter("unm");
 		String p = request.getParameter("pass");
 		HttpSession session = request.getSession();
@@ -49,7 +49,6 @@ public class loginservlet extends HttpServlet {
             pstmt.close();
 			con.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -65,7 +64,6 @@ public class loginservlet extends HttpServlet {
 			con = DriverManager.getConnection(jdbcurl, unm, pass);
 		}
 		catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 		}
 		return con;
